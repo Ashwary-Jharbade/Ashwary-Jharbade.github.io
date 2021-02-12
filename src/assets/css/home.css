@@ -1,0 +1,137 @@
+.colorize{
+    background-color: var(--cvback);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.noncolorize{
+    padding: 20px;
+    background-color: white;
+}
+
+.cover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --bs-gutter-x: 0rem;
+}
+
+body{
+    background-color: #f0f8ff3a;
+}
+
+.address{
+    display: flex;
+}
+
+.addDetails p{
+    margin:10px 10px;
+    color:var(--cvblack);
+}
+
+.addIcons{
+    border:2px solid var(--cvmyellow);
+    color:var(--cvmyellow);
+    font: 18px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.addIcons div{
+    margin: 10px 10px;
+}
+
+.cvsections h5{
+    color: var(--cvyellow);
+}
+
+.cvsections p{
+    color: var(--cvblack);
+}
+
+.cvsections p a{
+    color: #604683;
+    text-decoration: none;
+}
+
+.cvsections ul li a{
+    color: #4c4683;
+    text-decoration: none;
+}
+
+.cvsections ul{
+    list-style: none;
+}
+  
+.cvsections ul li::marker{
+    content:"\25A0" ;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    color: var(--cvyellow);
+    border-radius: 50%;
+}
+
+@keyframes roto{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes still{
+    from{
+        transform: rotate(360deg);
+    }
+
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+.circle1{
+    border: 4px solid var(--cvback);
+    width: fit-content;
+    border-radius: 50%;
+}
+
+.circle2{
+    border: 4px solid transparent;
+    border-right:4px solid var(--cvmyellow);
+    border-radius: 50%;
+    padding: 20px;
+    animation: roto 100s linear infinite;
+}
+
+.circle3{
+    height: 150px;
+    width: 150px;
+    background-color: var(--cvyellow);
+    border-radius: 50%;
+    background-image: url(img.jpg);
+    background-size: cover;
+    animation: still 100s linear infinite !important;
+    background-position: center;
+    transform: scale(1.1);
+}
+
+.left{
+    display: none;
+}
+
+.right{
+    display: block;
+}
+
+
+@media only screen and (max-width:991px)
+{
+    .left{
+        display: block;
+    }
+    
+    .right{
+        display: none;
+    }
+    
+}
